@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "collegia": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "${CLAUDE_PLUGIN_ROOT}",
+        "fastmcp",
+        "run",
+        "${CLAUDE_PLUGIN_ROOT}/src/collegia_mcp/server.py"
+      ]
+    }
+  }
+}

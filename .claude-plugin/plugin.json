@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "collegia",
+  "displayName": "Collège de Bruxelles",
+  "version": "0.1.0",
+  "description": "Outils, données et méthodes pédagogiques du Collège de Bruxelles pour les enseignants",
+  "author": {
+    "name": "Hassan Mkhallati",
+    "email": "hassan.mkhallati@excellentium.be"
+  },
+  "repository": "https://github.com/Hmkhalla/collegia-mcp",
+  "license": "MIT",
+  "keywords": ["education", "enseignement", "college-de-bruxelles"]
+}
