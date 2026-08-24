@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "collegia-mcp",
+  "owner": {
+    "name": "Hassan Mkhallati",
+    "email": "hassan.mkhallati@excellentium.be"
+  },
+  "description": "Plugins du Collège de Bruxelles pour les enseignants",
+  "version": "0.1.0",
+  "plugins": [
+    {
+      "name": "collegia",
+      "source": "./",
+      "description": "Outils, données et méthodes pédagogiques du Collège de Bruxelles",
+      "version": "0.1.0",
+      "author": {
+        "name": "Hassan Mkhallati"
+      }
+    }
+  ]
+}

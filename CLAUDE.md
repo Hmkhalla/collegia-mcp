@@ -52,14 +52,16 @@ uv run fastmcp inspect src/collegia_mcp/server.py  # list registered tools/resou
 Plugin:
 
 ```bash
-claude plugin validate .                 # check manifest, skill frontmatter, MCP config
-claude plugin install . --scope local    # install from this directory for testing
-claude plugin details collegia           # component inventory and token cost
+claude plugin validate .                          # validates marketplace.json when present
+claude plugin marketplace add /path/to/collegia-mcp
+claude plugin install collegia@collegia-mcp       # install from the marketplace
+claude plugin details collegia                    # component inventory and token cost
 ```
 
-`claude plugin validate .` warns that `CLAUDE.md` at the plugin root isn't loaded as plugin context.
-Expected — this file is for developing the repo, not for shipping. Don't run `--strict` in CI without
-accounting for it.
+The repo is both the plugin and its own marketplace (`.claude-plugin/marketplace.json`, plugin `source:
+"./"`). Note `claude plugin validate .` reports on the *marketplace* manifest once that file exists; it
+previously warned that `CLAUDE.md` at the plugin root isn't shipped as plugin context, which is expected
+— this file is for developing the repo.
 
 Tests (once pytest is added): FastMCP servers are tested **in-process** by passing the server object to
 `Client` — no subprocess, no network. See https://gofastmcp.com/servers/testing.md.
